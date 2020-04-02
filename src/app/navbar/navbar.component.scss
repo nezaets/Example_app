@@ -1,5 +1,6 @@
 mat-list-item {
   cursor: pointer;
+
   &:hover {
     color: rgba(0, 0, 0, 0.5);
   }
@@ -14,6 +15,7 @@ mat-list-item {
 [mat-line].collapsed {
   display: none;
 }
+
 :host {
   display: flex;
   flex-direction: column;

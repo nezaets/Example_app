@@ -11,15 +11,15 @@ import { PostWithUser } from './post';
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss']
+  styleUrls: [ './posts.component.scss' ],
 })
 export class PostsComponent implements OnInit {
-  public posts$: Observable<PostWithUser[]>
+  public posts$: Observable<PostWithUser[]>;
 
   constructor(
     private postService: PostsService,
     private usersService: UsersService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
   ) { }
 
   public ngOnInit(): void {
@@ -28,25 +28,28 @@ export class PostsComponent implements OnInit {
         this.usersService.getUsers(),
       ],
     )
-    .pipe(
-      map(([ posts, users ]) =>
-        posts.map(post => {
-          const user = users.find(u => u.id === post.userId)
-          const name = user ? user.name : ''
-          const userId = user ? user.id : null
+      .pipe(
+        map(([ posts, users ]) =>
+          posts.map(post => {
+            const user = users.find(u => u.id === post.userId);
+            const name = user ? user.name : '';
+            const userId = user ? user.id : null;
 
-          return { ...post, name, userId };
-        }),
-      ),
-    );
+            return {
+              ...post,
+              name,
+              userId,
+            };
+          }),
+        ),
+      );
   }
-
 
   public openPostDetailsDialog(post: PostWithUser): void {
     this.dialog.open(PostDetailsComponent, {
       height: '600px',
       width: '600px',
-      data: post
+      data: post,
     });
   }
 

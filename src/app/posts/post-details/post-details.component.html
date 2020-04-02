@@ -4,6 +4,7 @@
     {{data.body}}
   </p>
   <div class="app-link"
+       (click)="onAuthorClick()"
        [routerLink]="['users', data.id]">
     <mat-icon aria-label="User icon">account_circle</mat-icon>
     {{data.name}}
@@ -16,6 +17,6 @@
       </div>
     </div>
   </div>
-  <a mat-raised-button (click)="toggleCommentsAmount()">
+  <a mat-raised-button class="toggle-btn" (click)="toggleCommentsAmount()">
     {{isMoreCommentsOpen ? "less comments" : "more comments"}}</a>
 </div>

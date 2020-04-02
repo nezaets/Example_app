@@ -16,16 +16,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { HomeComponent } from './home/home.component';
 import { TextEllipsisPipe } from './shared/pipes/text-ellipsis.pipe';
 import { PostDetailsComponent } from './posts/post-details/post-details.component';
-import { MatDialogModule } from '@angular/material/dialog'
-import { MatCardModule } from '@angular/material/card'
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
-import { PostFormComponent } from './posts/post-form/post-form.component'
-import { ReactiveFormsModule } from '@angular/forms'
-import { MatFormFieldModule } from '@angular/material/form-field'
-import { MatInputModule } from '@angular/material/input'
+import { PostFormComponent } from './posts/post-form/post-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { UserDetailsDialogComponent } from './users/user-details-dialog/user-details-dialog.component';
-import { UserDetailsComponent } from './users/user-details/user-details.component'
+import { UserDetailsComponent } from './users/user-details/user-details.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,9 +56,9 @@ import { UserDetailsComponent } from './users/user-details/user-details.componen
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ],
 })
-export class AppModule { }
+export class AppModule {}

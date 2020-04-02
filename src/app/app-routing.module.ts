@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UsersComponent } from './users/users.component'
-import { PostsComponent } from './posts/posts.component'
-import { HomeComponent } from './home/home.component'
-import { UserDetailsDialogComponent } from './users/user-details-dialog/user-details-dialog.component'
+import { UsersComponent } from './users/users.component';
+import { PostsComponent } from './posts/posts.component';
+import { HomeComponent } from './home/home.component';
+import { UserDetailsDialogComponent } from './users/user-details-dialog/user-details-dialog.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'users',
@@ -18,16 +18,16 @@ const routes: Routes = [
         path: ':id',
         component: UserDetailsDialogComponent,
       },
-    ]
+    ],
   },
   {
     path: 'posts',
-    component: PostsComponent
+    component: PostsComponent,
   },
-]
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

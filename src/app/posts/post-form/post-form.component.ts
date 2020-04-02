@@ -5,10 +5,10 @@ import { Post } from '../post';
 @Component({
   selector: 'app-post-form',
   templateUrl: './post-form.component.html',
-  styleUrls: ['./post-form.component.scss']
+  styleUrls: [ './post-form.component.scss' ],
 })
 export class PostFormComponent implements OnInit {
-  @Output() post = new EventEmitter<Post>()
+  @Output() post = new EventEmitter<Post>();
   public postForm = this.fb.group({
     title: [ '', [ Validators.required ] ],
     body: [ '', [ Validators.required ] ],

@@ -4,7 +4,7 @@ import { Post, PostComment } from './post';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PostsService {
 
@@ -15,7 +15,7 @@ export class PostsService {
   }
 
   public getPostComments(postId: number): Observable<PostComment[]> {
-    const params = new HttpParams().set('userId', String(postId))
+    const params = new HttpParams().set('userId', String(postId));
     return this.httpClient.get<PostComment[]>(`https://jsonplaceholder.typicode.com/comments/`, { params });
   }
 }

@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostFormComponent } from './post-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('PostFormComponent', () => {
   let component: PostFormComponent;
@@ -8,9 +10,11 @@ describe('PostFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostFormComponent ]
-    })
-    .compileComponents();
+             imports: [ ReactiveFormsModule ],
+             declarations: [ PostFormComponent ],
+             schemas: [ NO_ERRORS_SCHEMA ],
+           })
+           .compileComponents();
   }));
 
   beforeEach(() => {
@@ -20,6 +24,7 @@ describe('PostFormComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component)
+      .toBeTruthy();
   });
 });
