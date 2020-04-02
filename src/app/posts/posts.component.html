@@ -1,0 +1,25 @@
+<button
+  class="add-post"
+  (click)="addPost()"
+  mat-fab
+  aria-label="Add new post"
+  color="basic">
+  <mat-icon>add</mat-icon>
+</button>
+<mat-list>
+  <div mat-subheader>Posts</div>
+  <mat-list-item *ngFor="let post of posts$ | async">
+    <mat-icon mat-list-icon>notes</mat-icon>
+    <div mat-line class="app-link" (click)="openPostDetailsDialog(post)">
+      {{post.title}}
+    </div>
+    <div mat-line class="post__body">
+      {{post.body | textEllipsis:50 }}
+    </div>
+    <div mat-line class="app-link" [routerLink]="['/users', post.userId]">
+      {{post.name }}
+    </div>
+  </mat-list-item>
+</mat-list>
+
+

@@ -1,0 +1,9 @@
+<app-header></app-header>
+<mat-sidenav-container>
+  <mat-sidenav [class.collapsed]="sidebarCollapsed" mode="side" opened>
+    <app-navbar (collapseChanged)="sidebarCollapsed = $event"></app-navbar>
+  </mat-sidenav>
+  <mat-sidenav-content [class.collapsed]="sidebarCollapsed">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

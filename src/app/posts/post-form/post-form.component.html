@@ -1,0 +1,21 @@
+<form [formGroup]="postForm"
+      (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input formControlName="title" matInput placeholder="Best post ever" >
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Text</mat-label>
+      <textarea rows="12" mat-autosize="false" formControlName="body" appearance="fill" matInput placeholder="This is text of the best post ever...">
+      </textarea>
+    </mat-form-field>
+  </p>
+
+  <button [disabled]="postForm.invalid" mat-flat-button color="primary">
+    Post
+  </button>
+</form>
+

@@ -1,0 +1,14 @@
+<mat-list>
+  <mat-list-item routerLink="/users">
+    <mat-icon mat-list-icon>account_circle</mat-icon>
+    <div [class.collapsed]= "collapsed" mat-line> Users </div>
+  </mat-list-item>
+  <mat-list-item routerLink="/posts">
+    <mat-icon mat-list-icon>notes</mat-icon>
+    <div [class.collapsed]= "collapsed"  mat-line > Posts </div>
+  </mat-list-item>
+</mat-list>
+
+<button class="toggle-button"  [class.collapsed]= "collapsed" (click)="toggle()" mat-icon-button aria-label="Toggle menu">
+  <mat-icon>chevron_left</mat-icon>
+</button>

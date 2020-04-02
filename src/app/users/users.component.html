@@ -1,0 +1,10 @@
+<mat-list>
+  <div mat-subheader>Users</div>
+  <mat-list-item *ngFor="let user of users$ | async">
+    <mat-icon mat-list-icon>account_circle</mat-icon>
+    <div class="app-link" mat-line [routerLink]="[user.id]"> {{user.name}} </div>
+    <div mat-line> {{user.email}} </div>
+    <div mat-line> {{user.company.name}} </div>
+  </mat-list-item>
+</mat-list>
+<router-outlet></router-outlet>

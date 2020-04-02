@@ -1,0 +1,15 @@
+:host {
+  height: 100%
+}
+
+
+.post__body {
+  white-space: pre;
+}
+
+.add-post {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 100;
+}

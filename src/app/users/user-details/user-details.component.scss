@@ -1,0 +1,19 @@
+.user-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  div {
+    padding: 5px;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+mat-icon {
+  padding-right: 5px;
+}
+
+h1 {
+  margin: 0
+}

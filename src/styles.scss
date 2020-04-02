@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  outline: 0;
+}
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+}
+
+.app-link {
+  display: flex;
+  align-items: center;
+
+  mat-icon {
+    padding-right: 5px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}

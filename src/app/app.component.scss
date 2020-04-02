@@ -1,0 +1,27 @@
+mat-sidenav {
+  width: 300px;
+  transition: width 0.5s;
+
+  &.collapsed {
+    width: 80px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 80px;
+  }
+}
+mat-sidenav-container {
+  height: calc(100% - 64px)
+}
+
+mat-sidenav-content{
+  &.collapsed {
+    transition: margin-left 0.3s;
+    margin-left: 80px !important;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-left: 80px !important;
+  }
+}
+

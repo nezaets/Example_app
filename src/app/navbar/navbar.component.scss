@@ -1,0 +1,36 @@
+mat-list-item {
+  cursor: pointer;
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  outline: 0;
+}
+
+.toggle-button {
+  align-self: flex-end;
+}
+
+[mat-line].collapsed {
+  display: none;
+}
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.toggle-button {
+
+  &.collapsed {
+    transform: rotate(180deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .toggle-button {
+    display: none;
+  }
+}
+

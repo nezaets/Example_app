@@ -1,0 +1,21 @@
+<div class="post-details">
+  <h2> {{data.title}}</h2>
+  <p>
+    {{data.body}}
+  </p>
+  <div class="app-link"
+       [routerLink]="['users', data.id]">
+    <mat-icon aria-label="User icon">account_circle</mat-icon>
+    {{data.name}}
+  </div>
+  <div class="comments">
+    <div class="comment"
+         *ngFor="let comment of comments$ | async">
+      <div class="comment-body">
+        <span class="comment-author">{{comment.email}}</span> {{comment.body}}
+      </div>
+    </div>
+  </div>
+  <a mat-raised-button (click)="toggleCommentsAmount()">
+    {{isMoreCommentsOpen ? "less comments" : "more comments"}}</a>
+</div>

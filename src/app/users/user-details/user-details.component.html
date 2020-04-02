@@ -1,0 +1,20 @@
+<div class="user-card">
+  <h1>
+    {{data.name}}
+  </h1>
+  <h3>
+    ({{data.company.name}})
+  </h3>
+  <div>
+    <mat-icon aria-label="Home icon">home</mat-icon>
+    {{data.address.city}}, {{data.address.zipcode}}, {{data.address.street}}
+  </div>
+  <div>
+    <mat-icon aria-label="Phone icon">phone</mat-icon>
+    {{data.phone}}
+  </div>
+  <div>
+    <mat-icon aria-label="Email icon">email</mat-icon>
+    {{data.email}}
+  </div>
+</div>
